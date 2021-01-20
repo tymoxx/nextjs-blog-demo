@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Layout, {siteTitle} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
+import { getSortedPostsData } from '../../lib/posts'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
@@ -24,7 +24,7 @@ export default function Home({allPostsData}) {
             <section className={utilStyles.headingMd}>
                 <h1 className="title">
                     here is {' '}
-                    <Link href="/posts/first-post">
+                    <Link href="/src/posts/first-post">
                         <a>my custom page</a>
                     </Link>
                 </h1>
